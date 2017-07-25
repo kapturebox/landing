@@ -33,8 +33,15 @@
 //     }
 // }
 
+// logo colors
+$blue-k: #00D2E8;
+$teal-p: #5CCEA4;
+$yellow-t: #FDC52E;
+$orange-u: #FD8729;
+$red-e: #FC3722;
+
 // variables.less
-$theme-primary: #F05F40;
+$theme-primary: $teal-p;
 $theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)

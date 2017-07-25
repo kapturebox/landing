@@ -71,7 +71,8 @@ aside {
 
 .navbar-default {
     background-color: white;
-    border-color: rgba($theme-dark, .5);
+    // border-color: rgba($theme-dark, .5);
+    border-color: transparent;
     @include sans-serif-font;
     @include transition-all;
     .navbar-header .navbar-brand {
@@ -82,6 +83,11 @@ aside {
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
+        }
+        >img {
+          height: 2em;
+          width: auto;
+          margin-top: -.75rem;
         }
     }
     .nav {
@@ -110,7 +116,7 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(white, .3);
+        // border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
             color: rgba(white, .7);
             &:hover,
@@ -127,13 +133,17 @@ aside {
         }
         &.affix {
             background-color: white;
-            border-color: rgba($theme-dark, .5);
+            // border-color: rgba($theme-dark, .5);
+            border-color: transparent;
             .navbar-header .navbar-brand {
                 color: $theme-primary;
                 font-size: 14px;
                 &:hover,
                 &:focus {
                     color: darken($theme-primary, 10%);
+                }
+                >img {
+                  margin-top: -.2rem;
                 }
             }
             .nav > li > a,
@@ -155,9 +165,10 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
     color: white;
+    // background-image: url('../img/lightmap.jpg');
+    background-image: url('../img/hardware1.jpg');
     .header-content {
         position: relative;
         text-align: center;
@@ -180,6 +191,17 @@ header {
                 margin-bottom: 50px;
             }
         }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, rgba(#444851, 0.7) 0%, rgba(#444851, 0.7) 100%);
     }
     @media (min-width: 768px) {
         min-height: 100%;
@@ -305,10 +327,21 @@ header {
 
 .btn {
     @include sans-serif-font;
-    border: none;
-    border-radius: 300px;
+    border: 1px solid white;
+    background: none;
+    border-radius: 0;
     font-weight: 700;
     text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: none;
+      border: 1px solid $teal-p;
+      color: $teal-p;
+      -webkit-transform-origin: left center;
+      transform-origin: left center;
+    }
 }
 
 .btn-xl {
@@ -348,4 +381,3 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-
