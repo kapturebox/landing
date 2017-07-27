@@ -6,7 +6,8 @@ body {
 
 body {
     // @include serif-font;
-    font-family: 'Nixie One', cursive;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
 }
 
 hr {
@@ -35,7 +36,8 @@ h4,
 h5,
 h6 {
     // @include sans-serif-font;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
 }
 
 p {
@@ -82,13 +84,13 @@ aside {
     // border-color: rgba($theme-dark, .5);
     border-color: transparent;
     // @include sans-serif-font;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Raleway', sans-serif;
     @include transition-all;
     .navbar-header .navbar-brand {
         color: $blue-t;
         // @include sans-serif-font;
-        font-family: 'Inconsolata', monospace;
-        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
         text-transform: uppercase;
         &:hover,
         &:focus {
@@ -119,7 +121,7 @@ aside {
             > a,
             > a:focus {
                 text-transform: uppercase;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 15px;
                 color: $theme-dark;
                 &:hover {
@@ -207,7 +209,10 @@ header {
     text-align: center;
     color: white;
     // background-image: url('../img/space5.jpeg');
-    background-image: url('../img/hardware1.jpg');
+    // background-image: url('../img/hardware1.jpg');
+    // background-image: linear-gradient(to bottom, rgba(#222428, 0.7) 0%, rgba(#222428, 0.7) 100%);
+    background: linear-gradient(to right, rgba(140,184,235,0.15), rgba(166,143,252,0.15)),#19161B;
+
     .header-content {
         position: relative;
         text-align: center;
@@ -215,7 +220,7 @@ header {
         width: 100%;
         .header-content-inner {
             h1 {
-                font-weight: 700;
+                font-weight: 600;
                 text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -229,8 +234,9 @@ header {
                 margin: 30px auto;
             }
             p {
-                font-weight: 300;
-                color: rgba(white, .7);
+                font-weight: 400;
+                // color: rgba(white, .7);
+                color: white;
                 font-size: 14px;
                 margin-bottom: 50px;
                 // padding: 0 25px;
@@ -238,16 +244,16 @@ header {
         }
     }
 
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom, rgba(#444851, 0.7) 0%, rgba(#444851, 0.7) 100%);
-    }
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     background-image: linear-gradient(to bottom, rgba(#444851, 0.7) 0%, rgba(#444851, 0.7) 100%);
+    // }
     @media (min-width: 768px) {
         // min-height: 100%;
         min-height: 550px;
@@ -375,40 +381,47 @@ header {
 }
 
 // Button Styles
-.btn-default {
-    @include button-variant($theme-dark, white, white);
-}
-
-.btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
-}
-
 .btn {
     // @include sans-serif-font;
-    font-family: 'Inconsolata', monospace;
-    border: 1px solid white;
+    font-family: 'Raleway', sans-serif;
+    border: 2px solid;
     background: none;
     border-radius: 0;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 0px 3px transparent;
+}
+
+.btn-default {
+    border-color: $blue-t;
+    color: $blue-t;
 
     &:hover,
     &:focus {
-      background: none;
-      border: 1px solid $blue-t;
-      color: $blue-t;
-      -webkit-transform-origin: left center;
-      transform-origin: left center;
+        background: none;
+        color: $blue-t;
+        border-color: $blue-t;
+        box-shadow: 0px 0px 0px 3px $blue-t;
+        // transform: scale(1.1);
     }
 }
 
-.btn-default {
-    border: 1px solid $blue-t;
-    color: $blue-t;
+.btn-primary {
+    border-color: white;
+    color: white;
+
+    &:hover,
+    &:focus {
+        background: none;
+        color: white;
+        border-color: white;
+        box-shadow: 0px 0px 0px 3px white;
+    }
 }
+
 .btn-lg {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .btn-xl {
@@ -423,9 +436,14 @@ header {
 }
 
 // Contact
-#contact .fa {
-    color: $theme-dark;
-    font-size: 4em;
+#contact {
+    h2 {
+        margin-bottom: 30px;
+    }
+    .fa {
+        color: $theme-dark;
+        font-size: 4em;
+    }
 }
 
 // Extras
