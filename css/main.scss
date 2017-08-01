@@ -33,16 +33,16 @@
 //     }
 // }
 
-// logo colors
-$blue-k: #00D2E8;
-$teal-p: #5CCEA4;
-$yellow-t: #FDC52E;
-$orange-u: #FD8729;
-$red-e: #FC3722;
+
+//logo colors
+$aqau-k: #71E2DB;
+$blue-t: #8CB8EB;
+$purple-e: #A68FFC;
+
 
 // variables.less
-$theme-primary: $teal-p;
-$theme-dark: #222;
+$theme-primary: $blue-t;
+$theme-dark: #2B2D3A;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
