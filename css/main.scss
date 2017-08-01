@@ -43,6 +43,8 @@ $purple-e: #A68FFC;
 // variables.less
 $theme-primary: $blue-t;
 $theme-dark: #2B2D3A;
+// $headings-color: rgba(43, 45, 58, 0.8);
+$headings-color: rgba($theme-dark, 0.8);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

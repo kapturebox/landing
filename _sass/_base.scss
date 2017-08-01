@@ -7,7 +7,7 @@ body {
 body {
     font-family: 'Inconsolata', monospace;
     font-weight: 400;
-    color: rgba($theme-dark, .8);
+    color: $headings-color;
 }
 
 hr {
@@ -38,6 +38,7 @@ h5,
 h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    color: $headings-color;
 }
 
 p {
@@ -121,7 +122,7 @@ aside {
                 text-transform: uppercase;
                 font-weight: 600;
                 font-size: 15px;
-                color: rgba($theme-dark, .8);
+                color: $headings-color;
                 &:hover {
                     color: $theme-primary;
                 }
@@ -186,7 +187,7 @@ aside {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: rgba($theme-dark, .8);
+                color: $headings-color;
                 &:hover {
                     color: $theme-primary;
                 }
@@ -287,21 +288,19 @@ header {
 #about {
     h2 {
       margin-bottom: 30px;
-      color: $blue-t;
     }
 }
 
 // Contact
 #contact {
-    background: linear-gradient(to right, rgba(255,255,255,0.75), rgba(255,255,255,0.9)),$aqau-k;
+    background: linear-gradient(to right, rgba(255,255,255,0.75), rgba(255,255,255,0.9)),$blue-t;
 
     h2 {
         margin-bottom: 60px;
-        color: rgba($theme-dark, .8);
     }
 
     a {
-        color: rgba($theme-dark, .8);
+        color: $headings-color;
         font-size: 20px;
 
         i {
@@ -404,22 +403,20 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.35s ease-in-out;
-    box-shadow: 0px 0px 0px 3px transparent;
 }
 
-.btn-default {
-    border-color: $blue-t;
-    color: $blue-t;
-
-    &:hover,
-    &:focus {
-        background: none;
-        color: $blue-t;
-        border-color: $blue-t;
-        box-shadow: 0px 0px 0px 3px $blue-t;
-        // transform: scale(1.1);
-    }
-}
+// .btn-default {
+//     border-color: $blue-t;
+//     color: $blue-t;
+//
+//     &:hover,
+//     &:focus {
+//         background: none;
+//         color: $blue-t;
+//         border-color: $blue-t;
+//         box-shadow: 0px 0px 0px 3px $blue-t;
+//     }
+// }
 
 .btn-primary {
     border-color: white;
@@ -429,10 +426,11 @@ header {
     &:focus {
         background: none;
         color: white;
-        border-color: white;
-        box-shadow: 0px 0px 0px 3px white;
+        border-color: $aqau-k;
+        box-shadow: inset 11em 0 0 0 $aqau-k;
     }
 }
+
 
 .btn-lg {
     font-size: 14px;
