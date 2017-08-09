@@ -170,7 +170,7 @@ aside {
         }
 
         li a:hover {
-            color: $purple-e;
+            color: $theme-primary;
         }
     }
 }
@@ -187,23 +187,32 @@ aside {
 
     .nav {
         > li {
+            :hover {
+                transform: scale(1.1);
+            }
             > a,
             > a:focus {
                 text-transform: uppercase;
                 font-weight: 600;
-                font-size: 15px;
-                color: $headings-color;
+                font-size: 14px;
+                padding: 15px 2px 5px 2px;
+                border-bottom: 2px solid transparent;
+                margin: 0 13px 10px 13px;
                 &:hover {
                     color: $theme-primary;
                 }
             }
             &.active {
+              > a {
+                border-bottom: 2px solid $theme-primary;
+                color: white;
+              }
                 > a,
                 > a:focus {
-                    color: $theme-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
+                        color: $theme-primary;
                     }
                 }
             }
@@ -222,6 +231,10 @@ aside {
                 >li {
                     float: none !important;
                     display: inline-block !important;
+
+                    :hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
@@ -229,28 +242,18 @@ aside {
         .nav > li > a:focus {
             color: white;
             &:hover {
-                color: $theme-primary;
+              color: $theme-primary;
             }
         }
         &.affix {
             background-color: white;
             border-color: transparent;
-            .navbar-header .navbar-brand {
-                color: $theme-primary;
-                font-size: 14px;
-                &:hover,
-                &:focus {
-                    color: darken($theme-primary, 10%);
-                }
-                >img {
-                  margin-top: -.2rem;
-                }
-            }
+
             .nav > li > a,
             .nav > li > a:focus {
                 color: $headings-color;
                 &:hover {
-                    color: $theme-primary;
+                  color: $theme-primary;
                 }
             }
         }
@@ -467,26 +470,14 @@ header {
 // Button Styles
 .btn {
     font-family: 'Raleway', sans-serif;
-    border: 2px solid;
+    border: 0 none;
     background: none;
     border-radius: 0;
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.35s ease-in-out;
+    box-shadow: inset 0 0 0 .15em white;
 }
-
-// .btn-default {
-//     border-color: $blue-t;
-//     color: $blue-t;
-//
-//     &:hover,
-//     &:focus {
-//         background: none;
-//         color: $blue-t;
-//         border-color: $blue-t;
-//         box-shadow: 0px 0px 0px 3px $blue-t;
-//     }
-// }
 
 .btn-primary {
     border-color: white;
@@ -496,8 +487,7 @@ header {
     &:focus {
         background: none;
         color: white;
-        border-color: $aqau-k;
-        box-shadow: inset 11em 0 0 0 $aqau-k;
+        box-shadow: inset 11em 0 0 0 $theme-primary;
     }
 }
 
