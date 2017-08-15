@@ -15,7 +15,7 @@ $(document).ready(function() {
   // make mobile menu close if clicked outside of it
   var isOpen = false;
   var insideClick;
-  
+
   $(document, "#toggle-bars, #menu").on('click', function() {
     var eventId = $(event.target).closest('#toggle-bars, #menu').attr('id');
 
@@ -32,6 +32,20 @@ $(document).ready(function() {
     if (isOpen && !insideClick) {
       $("#toggle-bars").removeClass("open");
       $("#menu").slideUp();
+    }
+  });
+  
+
+  // change menu bars color when scrolling past header section
+  $(window).on("scroll", function() {
+    var wnd = $(window).scrollTop();
+
+    if (wnd > 300) {
+      $("#toggle-bars div").removeClass("white-bg");
+      $("#toggle-bars div").addClass("colored-bg");
+    } else {
+      $("#toggle-bars div").removeClass("colored-bg");
+      $("#toggle-bars div").addClass("white-bg");
     }
   });
 
