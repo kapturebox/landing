@@ -16,7 +16,7 @@ $(document).ready(function() {
   var isOpen = false;
   var insideClick;
 
-  $(document, "#toggle-bars, #menu").on('click', function() {
+  $(document, "#toggle-bars, #menu").on('click', function(event) {
     var eventId = $(event.target).closest('#toggle-bars, #menu').attr('id');
 
     if ($("#toggle-bars").hasClass("open")) {
@@ -34,18 +34,16 @@ $(document).ready(function() {
       $("#menu").slideUp();
     }
   });
-  
+
 
   // change menu bars color when scrolling past header section
   $(window).on("scroll", function() {
     var wnd = $(window).scrollTop();
 
     if (wnd > 300) {
-      $("#toggle-bars div").removeClass("white-bg");
-      $("#toggle-bars div").addClass("colored-bg");
+      $("#toggle-bars div").addClass("colored-bg").removeClass("white-bg");
     } else {
-      $("#toggle-bars div").removeClass("colored-bg");
-      $("#toggle-bars div").addClass("white-bg");
+      $("#toggle-bars div").addClass("white-bg").removeClass("colored-bg");
     }
   });
 
