@@ -5,8 +5,10 @@ A simple page about Kapture!
 
 # Development
 
-Ensure you have jekyll installed, and then run the following:
+Ensure you have jekyll and gulp installed, and then run the following:
 
 ```bash
-jekyll serve
+gulp
 ```
+
+BrowserSync will automatically open a browser to localhost:4000 and watch for changes
