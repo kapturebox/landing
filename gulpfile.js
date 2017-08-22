@@ -4,15 +4,23 @@ var browserSync = require('browser-sync').create();
 
 
 // Task for building blog when something changed:
-gulp.task('build', shell.task([
+gulp.task('serve', shell.task([
   'jekyll serve'
 ]));
 
 // Task for serving blog with Browsersync
-gulp.task('serve', function() {
-  browserSync.init({server: {baseDir: '_site/'}, port: 4000, ui: {port: 4001}});
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: '_site/'
+    },
+    port: 4000,
+    ui: {
+      port: 4001
+    }
+  });
   // Reloads page when some of the already built files changed:
   gulp.watch('_site/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['build', 'serve']);
+gulp.task('default', ['serve', 'browserSync']);
