@@ -19,3 +19,4 @@ $ npm install -g gulp
 ```
 
 To get started on your local server, run `$ gulp`. BrowserSync will automatically open a browser to `localhost:4000`, watch for changes, and auto reload.
+
