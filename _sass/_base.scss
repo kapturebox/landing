@@ -52,8 +52,23 @@ p {
 }
 
 .bg-dark {
-    background-color: $theme-dark;
     color: white;
+
+    h1,h2,h3,h4,h5 {
+        color: white;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: $theme-primary;
+        }
+    }
+}
+
+.bg-light {
+    background-color: white;
 }
 
 .text-faded {
@@ -373,14 +388,9 @@ header {
 
 // get-started section
 #get-started {
-    background: linear-gradient(to right, rgba(255,255,255,0.75), rgba(255,255,255,0.9)),$blue-t;
-
-    h2 {
-        margin-bottom: 60px;
-    }
+    // background: linear-gradient(to right, rgba(255,255,255,0.75), rgba(255,255,255,0.9)),$blue-t;
 
     a {
-        color: $headings-color;
         font-size: 20px;
 
         i {
@@ -390,14 +400,9 @@ header {
         span {
             display: block;
         }
-
-        &:hover {
-            color: $theme-primary;
-        }
     }
 
     .fa {
-        color: $theme-dark;
         font-size: 4em;
     }
 }
@@ -464,7 +469,6 @@ header {
 }
 
 .call-to-action {
-
     h2 {
         margin: 0 auto 20px;
     }
@@ -546,5 +550,17 @@ img::-moz-selection {
 }
 
 body {
+    background-color: $theme-dark;
     -webkit-tap-highlight-color: $theme-dark;
 }
+
+.red {
+    color: red;
+}
+
+footer {
+    .footer-text {
+        font-weight: bold;
+        margin-top: 2em;
+    }
+}    
