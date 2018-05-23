@@ -47,4 +47,13 @@ $(document).ready(function() {
     }
   });
 
+  $("video").on("play", () => gtag('event', 'videoplay'));
+
+  $(".downloadlink").on("click", (e) => {
+    gtag('event', 'go-get', {
+      target: $(e.target).attr("data-method")
+    });
+  });
+
 });
+
